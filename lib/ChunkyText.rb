@@ -1,5 +1,8 @@
 require "ChunkyText/version"
 
 module ChunkyText
-  # Your code goes here...
+  def self.chunk(text, max_length)
+    text.scan(/.{#{max_length}}/)
+    # binding.pry
+  end
 end
