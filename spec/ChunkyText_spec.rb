@@ -2,6 +2,6 @@ require 'spec_helper'
 
 describe ChunkyText do
   it 'does stuff' do
-    pending # no code yet
+    expect(1).to eq(1)
   end
 end
