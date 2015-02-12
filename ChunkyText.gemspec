@@ -7,8 +7,8 @@ Gem::Specification.new do |spec|
   spec.version       = ChunkyText::VERSION
   spec.authors       = ["Doug Steinberg", "Jason Parker"]
   spec.email         = ["dstein-phins@hotmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = %q{ Break up a long string of text into smaller strings for Twitter }
+  spec.description   = %q{ Break up a long string of text into nicely formated 140 character strings for Twitter and keping links and punctuation intact. }
   spec.homepage      = ""
   spec.license       = "MIT"
 
