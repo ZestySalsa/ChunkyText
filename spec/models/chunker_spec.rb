@@ -50,7 +50,7 @@ describe ChunkyText::Chunker do
 
   describe '#chunk_array' do
     it '[returns an array]' do
-      array = ChunkyText::Chunker.chunk_array(long_text, 140)
+      array = ChunkyText::Chunker.new(long_text, 140).chunk_array
       expect(array).to be_a(Array)
     end
 

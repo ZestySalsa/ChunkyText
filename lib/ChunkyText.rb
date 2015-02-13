@@ -1,6 +1,5 @@
 require "ChunkyText/version"
 require "ChunkyText/chunker" 
-require "ChunkyText/chunk_array" 
 
 
 
