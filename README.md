@@ -32,14 +32,9 @@ Initialize the ChunkyText object with the string and a max length
 
 Call `.chunk_array` on the object and get an array back.
 
-    text.chunk_array #=> ["Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo",
- "inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
- "ut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
- "or sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat volupta",
- "em. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?",
- " autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo volu",
- "tas nulla pariatur?"]
-    
+```ruby
+  text.chunk_array #=> ["Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, ... , ... , ...]
+```
 
 ## Contributing
 
