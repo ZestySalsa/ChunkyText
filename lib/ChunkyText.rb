@@ -1,5 +1,5 @@
-require "ChunkyText/version"
-require "ChunkyText/chunker" 
+require_relative "ChunkyText/version"
+require_relative "ChunkyText/chunker" 
 
 
 
