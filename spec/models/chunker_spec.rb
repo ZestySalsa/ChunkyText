@@ -14,6 +14,10 @@ describe ChunkyText::Chunker do
     string + punctuation_mark
   end
 
+  let(:string_with_no_punctuation_before_140_chars) do
+    string = Faker::Lorem.characters(150)
+  end
+
   describe '#get_chunk' do
     it '[returns a string]' do
       text = ChunkyText::Chunker.new(long_text, 140)
@@ -41,6 +45,13 @@ describe ChunkyText::Chunker do
     context '[a punctuation mark occurs at the max length character]' do
       it '[returns a string == the max length]' do
         text = ChunkyText::Chunker.new(string_with_punctuation_at_140_chars, 140)
+        expect(text.get_chunk.length).to eq(140)
+      end
+    end
+
+    context '[there is no punctuation mark within the max length]' do
+      it '[returns a string == the max length]' do
+        text = ChunkyText::Chunker.new(string_with_no_punctuation_before_140_chars, 140)
         expect(text.get_chunk.length).to eq(140)
       end
     end
