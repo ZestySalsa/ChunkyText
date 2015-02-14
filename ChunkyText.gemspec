@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["dstein-phins@hotmail.com"]
   spec.summary       = %q{ Break up a long string of text into smaller strings for Twitter }
   spec.description   = %q{ Break up a long string of text into nicely formated 140 character strings for Twitter and keping links and punctuation intact. }
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/ZestySalsa/ChunkyText"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
