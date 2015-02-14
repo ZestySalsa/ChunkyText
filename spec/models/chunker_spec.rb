@@ -21,38 +21,38 @@ describe ChunkyText::Chunker do
   describe '#get_chunk' do
     it '[returns a string]' do
       text = ChunkyText::Chunker.new(long_text, 140)
-      expect(text.get_chunk).to be_a(String)
+      expect(text.get_chunk(text.string)).to be_a(String)
     end
 
     it '[returns a string <= the max length]' do
       text = ChunkyText::Chunker.new(long_text, 140)
-      expect(text.get_chunk.length).to be <= 140
+      expect(text.get_chunk(text.string).length).to be <= 140
     end
 
 
     context '[a punctuation mark occurs before the max length character]' do
       it '[returns a string < the max length]' do
         text = ChunkyText::Chunker.new(string_with_punctuation_before_140_chars, 140)
-        expect(text.get_chunk.length).to be < 140
+        expect(text.get_chunk(text.string).length).to be < 140
       end
 
       it '[returns a string that ends in a punctuation mark]' do
         text = ChunkyText::Chunker.new(long_text, 140)
-        expect(['!','?','.']).to include(text.get_chunk[-1]) 
+        expect(['!','?','.']).to include(text.get_chunk(text.string)[-1]) 
       end
     end
 
     context '[a punctuation mark occurs at the max length character]' do
       it '[returns a string == the max length]' do
         text = ChunkyText::Chunker.new(string_with_punctuation_at_140_chars, 140)
-        expect(text.get_chunk.length).to eq(140)
+        expect(text.get_chunk(text.string).length).to eq(140)
       end
     end
 
     context '[there is no punctuation mark within the max length]' do
       it '[returns a string == the max length]' do
         text = ChunkyText::Chunker.new(string_with_no_punctuation_before_140_chars, 140)
-        expect(text.get_chunk.length).to eq(140)
+        expect(text.get_chunk(text.string).length).to eq(140)
       end
     end
 

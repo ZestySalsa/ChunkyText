@@ -9,8 +9,8 @@ module ChunkyText
       @max_length = max_length
     end 
 
-    def get_chunk
-      smaller_string = string.slice(0,max_length)
+    def get_chunk(input_string)
+      smaller_string = input_string.slice(0,max_length)
 
       if last_punctuation_mark(smaller_string)
         smaller_string.slice(0,last_punctuation_mark(smaller_string) + 1)
@@ -23,7 +23,7 @@ module ChunkyText
       input_string = string.clone
       array = []
       while input_string.length > 0 do
-        array << get_chunk
+        array << get_chunk(input_string)
         
         input_string.slice!(0..max_length)
       end
